@@ -79,6 +79,7 @@ class play:
         pygame.display.set_caption('Play screen')
         self.add_boundaries()
         t = 0
+        t0 = 0
         _run = True
         scale_is_visible = False
         while True:
@@ -94,7 +95,7 @@ class play:
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     t0 = t
                     scale_is_visible = True
-                if event.type == pygame.MOUSEBUTTONUP and t>1:
+                if event.type == pygame.MOUSEBUTTONUP and t>0.1:
                     self.vscale = max(1, 5*(t-t0))
                     scale_is_visible = False
                     pos = self.pendulum.coordinates(t)
