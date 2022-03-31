@@ -5,7 +5,7 @@ from play import play
 from commonlib import get_font
 
 pygame.init()
-WIDTH, HEIGHT = 1280, 720
+WIDTH, HEIGHT = 1200, 720
 FPS = 60
 
 class main_application:

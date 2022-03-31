@@ -19,31 +19,31 @@ class main_menu:
             self.screen.blit(self.BG, (0, 0))
             MENU_MOUSE_POS = pygame.mouse.get_pos()
             MENU_TEXT = get_font(100).render("Sweet Party", True, "#5B0B8B")
-            MENU_RECT = MENU_TEXT.get_rect(center=(640, 100))
-            self.screen.blit(self.BG_HEADER, (40, 20))
+            MENU_RECT = MENU_TEXT.get_rect(center=(self.parent.width//2, 100))
+            self.screen.blit(self.BG_HEADER, (2, 20))
             self.screen.blit(MENU_TEXT, MENU_RECT)
             PLAY_BUTTON = Button(image=pygame.image.load("assets/button4.png"),
-                                 pos=(640, 250),
+                                 pos=(self.parent.width//2, 250),
                                  text_input="PLAY", font=get_font(30), base_color=self.BASE_COLOR,
                                  hovering_color=self.HIGHLITE_COLOR)
             SHOP_BUTTON = Button(image=pygame.image.load("assets/button4.png"),
-                                 pos=(640, 310),
+                                 pos=(self.parent.width//2, 310),
                                  text_input="SHOP", font=get_font(30), base_color=self.BASE_COLOR,
                                  hovering_color=self.HIGHLITE_COLOR)
             INVENTORY_BUTTON = Button(image=pygame.image.load("assets/button6.png"),
-                                      pos=(640, 370),
+                                      pos=(self.parent.width//2, 370),
                                       text_input="INVENTORY", font=get_font(30), base_color=self.BASE_COLOR,
                                       hovering_color=self.HIGHLITE_COLOR)
             COMPETITION_BUTTON = Button(image=pygame.image.load("assets/button8.png"),
-                                        pos=(640, 440),
+                                        pos=(self.parent.width//2, 440),
                                         text_input="COMPETITION", font=get_font(30), base_color=self.BASE_COLOR,
                                         hovering_color=self.HIGHLITE_COLOR)
             WINS_BUTTON = Button(image=pygame.image.load("assets/button4.png"),
-                                 pos=(640, 510),
+                                 pos=(self.parent.width//2, 510),
                                  text_input="WINS", font=get_font(30), base_color=self.BASE_COLOR,
                                  hovering_color=self.HIGHLITE_COLOR)
             QUIT_BUTTON = Button(image=pygame.image.load("assets/button4.png"),
-                                 pos=(640, 580),
+                                 pos=(self.parent.width//2, 580),
                                  text_input="QUIT", font=get_font(30), base_color=self.BASE_COLOR,
                                  hovering_color=self.HIGHLITE_COLOR)
 
